@@ -1,0 +1,19 @@
+{
+  "name": "mernproject",
+  "version": "1.0.0",
+  "description": "Project based on React , Express js , API , Mongodb, Node js (MERN stack app)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudhirDeshwal/MERN_STACK_Project.git"
+  },
+  "author": "Sudhir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SudhirDeshwal/MERN_STACK_Project/issues"
+  },
+  "homepage": "https://github.com/SudhirDeshwal/MERN_STACK_Project#readme"
+}
