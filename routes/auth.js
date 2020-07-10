@@ -10,7 +10,7 @@ const router = express.Router();
 const { userSignupValidator } = require("../validator");
 
 //from controller
-const {signup , signin , signout , requireSignin} = require('../controllers/auth')
+const {signup , signin , signout } = require('../controllers/auth')
 
 
 //functionlities

@@ -8,19 +8,19 @@ const router = express.Router();
 const { userByID } = require('../controllers/user')
 
 //from controller auth
-const {requireSignin} = require('../controllers/auth')
+const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
 
 //functionalities
 
-router.get('/onlyLogged/:userId', requireSignin, (req, res) => {
+router.get('/onlyLogged/:userId', requireSignin, isAuth ,isAdmin,(req, res) => {
     res.json({
         user: req.profile
     });
 });
 
 
-router.get('/user/:userId', requireSignin);
+router.get('/user/:userId', requireSignin, isAuth);
 
 router.param('userId', userByID);
 
