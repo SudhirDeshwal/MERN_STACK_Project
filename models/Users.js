@@ -48,6 +48,12 @@ UserSchema.virtual('password')
     });
 
     UserSchema.methods = {
+
+        authenticate: function(plainText) {
+            return this.encryptPassword(plainText) === this.encryp_password;
+        },
+
+
           
       encryptPassword: function(password) {
 
