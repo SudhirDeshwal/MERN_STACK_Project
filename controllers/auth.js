@@ -3,7 +3,7 @@ const Users = require('../models/Users');
 const jwt = require('jsonwebtoken'); // to generate signed token
 const expressJwt = require('express-jwt'); // for authorization check
 
-
+//Sign up
 exports.signup = (req ,res) => {
    
     console.log('user body',req.body)
@@ -23,7 +23,7 @@ exports.signup = (req ,res) => {
 
 };
 
-
+//Sign in
 exports.signin = (req ,res) => {
     const { email, password } = req.body;
     User.findOne({ email }, (err, user) => {
@@ -50,7 +50,20 @@ exports.signin = (req ,res) => {
 
 }
 
+
+//Sign out
 exports.signout = (req, res) => {
     res.clearCookie('t');
     res.json({ message: 'Signout success' });
 };
+
+
+//Need to sign in
+
+exports.requireSignin = expressJwt({
+    secret: process.env.JWT_SECRET,
+    userProperty: 'auth'
+});
+
+
+

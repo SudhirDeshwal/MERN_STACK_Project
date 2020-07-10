@@ -8,7 +8,7 @@ require('dotenv').config()
 
 
 //imported routes
-const users = require('./routes/users');
+const authRoutes = require('./routes/auth');
 
 //app
 const app = express()
@@ -25,7 +25,7 @@ app.use(expressValidator());
 connectDB();
 
 //Routes middleware
-app.use('/api', users);
+app.use('/api', authRoutes);
 
 
 //Port Settings
