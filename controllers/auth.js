@@ -1,5 +1,4 @@
 let User = require('../models/Users');
-const Users = require('../models/Users');
 const jwt = require('jsonwebtoken'); // to generate signed token
 const expressJwt = require('express-jwt'); // for authorization check
 
@@ -61,7 +60,7 @@ exports.signout = (req, res) => {
 //Need to sign in
 
 exports.requireSignin = expressJwt({
-    secret: process.env.JWT_SECRET,
+    secret: process.env.JWT_SECRET,algorithms: ['RS256'],
     userProperty: 'auth'
 });
 

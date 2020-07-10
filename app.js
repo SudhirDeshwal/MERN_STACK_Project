@@ -1,5 +1,4 @@
 const express = require('express');
-const connectDB = require('./config/connectDB');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
@@ -8,7 +7,9 @@ require('dotenv').config()
 
 
 //imported routes
+const connectDB = require('./config/connectDB');
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
 
 //app
 const app = express()
@@ -26,6 +27,7 @@ connectDB();
 
 //Routes middleware
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
 
 //Port Settings
