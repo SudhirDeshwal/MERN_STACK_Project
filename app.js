@@ -3,6 +3,7 @@ const connectDB = require('./config/connectDB');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const expressValidator = require('express-validator');
 require('dotenv').config()
 
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(cookieParser());
+app.use(expressValidator());
 
 
 //connect to db
