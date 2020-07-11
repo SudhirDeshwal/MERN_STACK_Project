@@ -15,7 +15,8 @@ exports.signup = (req ,res) => {
         }
         user.randomStr = undefined;
         user.encryp_password = undefined;
-        res.json({
+     //   res.json(JSON.parse(user));
+         res.json({
             user
         });
     });

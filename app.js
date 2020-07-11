@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const expressValidator = require('express-validator');
 require('dotenv').config()
+const request = require('request');
+var cors = require('cors')
 
 
 //imported routes
@@ -14,6 +16,12 @@ const userRoutes = require('./routes/user');
 //app
 const app = express()
 app.use(express.json());
+app.use(cors())
+
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+//   });
 
 //middleware
 app.use(morgan('dev'))
