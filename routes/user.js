@@ -13,7 +13,7 @@ const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
 //functionalities
 
-router.get('/onlyLogged/:userId', requireSignin, isAuth ,isAdmin,(req, res) => {
+router.get('/onlyLogged/:userId', requireSignin, isAuth ,(req, res) => {
     res.json({
         user: req.profile
     });
