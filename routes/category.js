@@ -15,7 +15,6 @@ const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
 //functionlities
 router.post('/category/create/:userId',requireSignin,isAuth,isAdmin, create )
-
 router.param('userId', userByID);
 
 module.exports = router;

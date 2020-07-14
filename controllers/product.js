@@ -53,8 +53,10 @@ exports.create = (req, res) => {
 
 //Middeleware Product by id
 
-exports.productBytID = (req, res, next, id) => {
-    Product.findById(id).exec((err, product) => {
+exports.productById = (req, res, next, id) => {
+    Product.findById(id)
+    .populate('category')
+    .exec((err, product) => {
             if (err || !product) {
                 return res.status(400).json({
                     error: 'Product not found'
@@ -63,4 +65,11 @@ exports.productBytID = (req, res, next, id) => {
             req.product = product;
             next();
         });
+};
+
+
+//Fetch product by id
+exports.fectchproduct = (req, res) => {
+   req.product.photo = undefined;
+    return res.json(req.product);
 };

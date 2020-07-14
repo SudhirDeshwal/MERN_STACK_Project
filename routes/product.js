@@ -8,16 +8,17 @@ const router = express.Router();
 const { userByID } = require('../controllers/user')
 
 //imports from controller Product
-const { create , productBytID } = require('../controllers/product')
+const { create , productById , fectchproduct} = require('../controllers/product')
 
 //from controller auth
 const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
 //functionlities
-router.post('/product/create/:userId',requireSignin,isAuth,isAdmin, create )
+router.get("/product/:productId", fectchproduct);
+router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 
 //usning id in param
 router.param('userId', userByID);
-router.param('userId', productBytID);
+router.param("productId", productById);
 
 module.exports = router; 
