@@ -35,3 +35,21 @@ exports.fectchCategory = (req , res) => {
     return res.json(req.category);
 
 }
+
+//update
+exports.updateCategory = (req , res) => {
+
+
+}
+
+//delete
+exports.removeCategory = (req , res) => {
+
+
+}
+
+//list all
+exports.listAllCategory = (req , res) => {
+
+
+}
