@@ -18,4 +18,4 @@ router.post('/product/create/:userId',requireSignin,isAuth,isAdmin, create )
 
 router.param('userId', userByID);
 
-module.exports = router;
+module.exports = router; 
