@@ -6,10 +6,10 @@ let userlist = require('../models/Users');
 const router = express.Router();
 
 
-//Validator
+//import from Validator
 const { userSignupValidator } = require("../validator");
 
-//from controller
+//imports from controller
 const {signup , signin , signout } = require('../controllers/auth')
 
 
