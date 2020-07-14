@@ -13,7 +13,7 @@ const { create , categoryById ,fectchCategory } = require('../controllers/catego
 //from controller auth
 const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
-//functionlities
+//-------CRUD operations functionlities----------//
 router.get('/category/:categoryId', fectchCategory);
 router.post('/category/create/:userId',requireSignin,isAuth,isAdmin, create )
 
