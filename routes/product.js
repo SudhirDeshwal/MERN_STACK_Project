@@ -8,17 +8,19 @@ const router = express.Router();
 const { userByID } = require('../controllers/user')
 
 //imports from controller Product
-const { create , productById , fectchproduct} = require('../controllers/product')
+const { create , productById , fectchproduct , removeProduct , updateProduct} = require('../controllers/product')
 
 //from controller auth
 const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
-//functionlities
+//-------CRUD operations functionlities----------//
 router.get("/product/:productId", fectchproduct);
 router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
+router.delete("/product/:productId/:userId",requireSignin,isAuth,isAdmin,removeProduct);
+router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct);
 
 //using id in param
 router.param('userId', userByID);
-router.param("productId", productById);
+router.param("productId", productById); 
 
 module.exports = router; 
