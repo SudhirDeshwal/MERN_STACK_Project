@@ -39,17 +39,50 @@ exports.fectchCategory = (req , res) => {
 //update
 exports.updateCategory = (req , res) => {
 
+    const category = req.category;
+    category.name = req.body.name;
+    category.save((err, data) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        } 
+        res.json(data);
+    });
+
 
 }
 
 //delete
 exports.removeCategory = (req , res) => {
 
+    const category = req.category;
+   
+       category.remove((err, data) => {
+                if (err) {
+                    return res.status(400).json({
+                        error: errorHandler(err)
+                    });
+                }
+                res.json({
+                    message: 'Category deleted'
+                });
+            });
+        
+    
+
 
 }
 
 //list all
 exports.listAllCategory = (req , res) => {
-
+    Category.find().exec((err, data) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        res.json(data);
+    });
 
 }
