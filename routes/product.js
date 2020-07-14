@@ -17,7 +17,7 @@ const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 router.get("/product/:productId", fectchproduct);
 router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 
-//usning id in param
+//using id in param
 router.param('userId', userByID);
 router.param("productId", productById);
 

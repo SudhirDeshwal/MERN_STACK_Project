@@ -8,13 +8,17 @@ const router = express.Router();
 const { userByID } = require('../controllers/user')
 
 //imports from controller category
-const { create } = require('../controllers/category')
+const { create , categoryById ,fectchCategory } = require('../controllers/category')
 
 //from controller auth
 const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
 
 //functionlities
+router.get('/category/:categoryId', fectchCategory);
 router.post('/category/create/:userId',requireSignin,isAuth,isAdmin, create )
-router.param('userId', userByID);
+
+//using id through param
+router.param('userId', userByID); 
+router.param('categoryId', categoryById);
 
 module.exports = router;
