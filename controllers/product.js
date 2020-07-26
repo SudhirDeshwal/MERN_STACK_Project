@@ -142,6 +142,11 @@ exports.updateProduct = (req , res) => {
 } 
 
 //List product using query
+// * sell / arrival
+// * by sell = /products?sortBy=sold&order=desc&limit=4
+// * by arrival = /products?sortBy=createdAt&order=desc&limit=4
+// * if no params are sent, then all products are returned
+
 exports.listproducts = (req, res) => {
     let order = req.query.order ? req.query.order : 'asc';
     let sortBy = req.query.sortBy ? req.query.sortBy : '_id';
@@ -152,6 +157,25 @@ exports.listproducts = (req, res) => {
         .populate('category')
         .sort([[sortBy, order]])
         .limit(limit)
+        .exec((err, products) => {
+            if (err) {
+                return res.status(400).json({
+                    error: 'Products not found'
+                });
+            }
+            res.json(products);
+        });
+};
+
+
+
+//Related product 
+exports.listRelated = (req, res) => {
+    let limit = req.query.limit ? parseInt(req.query.limit) : 2;
+            //showing products except the one in params
+    Product.find({ _id: { $ne: req.product }, category: req.product.category })
+        .limit(limit)
+        .populate('category', '_id name')
         .exec((err, products) => {
             if (err) {
                 return res.status(400).json({
