@@ -17,7 +17,7 @@ router.get('/onlyLogged/:userId', requireSignin, isAuth ,(req, res) => {
     res.json({
         user: req.profile
     });
-});
+}); 
 
 
 router.get('/user/:userId', requireSignin, isAuth);

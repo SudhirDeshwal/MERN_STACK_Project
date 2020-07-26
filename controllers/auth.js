@@ -19,7 +19,7 @@ exports.signup = (req ,res) => {
      //   res.json(JSON.parse(user));
          res.json({
             user
-        });
+        }); 
     });
 
 };
@@ -89,7 +89,7 @@ exports.isAdmin = (req, res, next) => {
             error: 'Admin resourse! Access denied'
         });
     }
-    next();
+    next();  
 };
 
 
