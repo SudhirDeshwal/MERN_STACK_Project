@@ -9,7 +9,7 @@ const { userByID } = require('../controllers/user')
 
 //imports from controller Product
 const { create , productById , fectchproduct , removeProduct , updateProduct , listproducts,
-    listRelated} = require('../controllers/product')
+    listRelated, listCategories} = require('../controllers/product')
 
 //from controller auth
 const {requireSignin , isAuth , isAdmin} = require('../controllers/auth')
@@ -19,9 +19,10 @@ router.get("/product/:productId", fectchproduct);
 router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 router.delete("/product/:productId/:userId",requireSignin,isAuth,isAdmin,removeProduct);
 router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct);
-//Advnaced crud operations quieries on products
+//Advnaced fetch operations quieries on products
 router.get("/products", listproducts);
 router.get("/products/related/:productId", listRelated);
+router.get("/products/categories", listCategories);
 
 //using id in param
 router.param('userId', userByID);
