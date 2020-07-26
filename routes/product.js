@@ -19,7 +19,7 @@ router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 router.delete("/product/:productId/:userId",requireSignin,isAuth,isAdmin,removeProduct);
 router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct);
 
-router.get("/products" , listproducts)
+router.get("/products", listproducts);
 
 //using id in param
 router.param('userId', userByID);
