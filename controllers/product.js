@@ -139,4 +139,11 @@ exports.updateProduct = (req , res) => {
     });
 
 
+} 
+
+
+exports.listproducts = (res , req) => {
+
+
+
 }
