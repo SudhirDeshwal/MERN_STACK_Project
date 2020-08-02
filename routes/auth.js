@@ -16,7 +16,7 @@ const {signup , signin , signout } = require('../controllers/auth')
 //functionlities
 router.post('/signup',userSignupValidator , signup )
 router.post('/signin', signin)
-router.get('/signout', signout)
+router.get('/signout', signout) 
 
 
 module.exports = router;

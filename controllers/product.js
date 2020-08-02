@@ -69,7 +69,7 @@ exports.productById = (req, res, next, id) => {
 
 //Fetch product by id
 exports.fectchproduct = (req, res) => {
-   req.product.photo = undefined;
+   //req.product.photo = undefined;
     return res.json(req.product);
 };
 
