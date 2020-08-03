@@ -1,25 +1,46 @@
 ## Project Details(server) :
 #Project Name: MERCH
+
+
+
 Users/Role : 
 •	Admin 
 •	Normal user
+
+
+
 Concept:
 •	Project is created to sell products online where admin can create product category and new products and can assign categories to products. While users can check the products listed by admin using different filters such as new arrival, most seller etc.
 
 Functionality :
+
+
 Register  
 •	Login
 •	Sign up
+
+
+
 Product
 •	New Product
 •	Filters on Products.
 •	Search Products.
+
+
+
+
 Categories
 •	New Category
 •	Assign category to product
+
+
+
 Role Management 
 •	User can sign up and check products with user dashboard
 •	Admin can Manage Product Categories and Products Listing with admin dashboard
+
+
+
 
 Assignment of work:
 •	All functionality create by me as its an individual  project for me.
