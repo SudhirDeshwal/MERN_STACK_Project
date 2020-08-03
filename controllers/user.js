@@ -1,5 +1,7 @@
 let User = require('../models/Users');
 
+
+//To check user by id
 exports.userByID = (req , res , next , id ) => {
 
     User.findById(id).exec((err, user) => {

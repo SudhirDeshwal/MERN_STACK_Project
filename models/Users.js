@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto')
 const uuid = require('uuid');
-//schema
+// User schema
 const UserSchema = new mongoose.Schema(
   {
     name: {
@@ -37,6 +37,7 @@ const UserSchema = new mongoose.Schema(
 { timestamps: true }
 );
 
+//to encrypt the password using uuid
 UserSchema.virtual('password')
     .set(function(password) {
         this._password = password;
@@ -49,12 +50,14 @@ UserSchema.virtual('password')
 
     UserSchema.methods = {
 
+
+        //macth the encryptPassword
         authenticate: function(plainText) {
             return this.encryptPassword(plainText) === this.encryp_password;
         },
 
 
-          
+          //function to encryptPassword
       encryptPassword: function(password) {
 
         if (!password) return '';
