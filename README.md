@@ -1,5 +1,5 @@
 ## Project Details(server) :
-Project Name: MERCH
+#Project Name: MERCH
 Users/Role : 
 •	Admin 
 •	Normal user
