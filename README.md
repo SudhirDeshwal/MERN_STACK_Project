@@ -1,4 +1,4 @@
-## Project Details(server) :
+## Project Details(server)
 ## Project Name: MERCH
 
 ## Users/Role : 
@@ -28,7 +28,7 @@
 
 
 ## Assignment of work:
-•	All functionality create by me as its an individual  project for me.
+•	All functionality created by me(Sudhir) as its an individual  project for me.
 
 ## Developer Details
 Name : Sudhir
