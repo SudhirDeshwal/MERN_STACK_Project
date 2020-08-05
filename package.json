@@ -4,7 +4,8 @@
   "description": "Project based on React , Express js , API , Mongodb, Node js (MERN stack app)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "server":"nodemon app.js"
   },
   "repository": {
     "type": "git",
