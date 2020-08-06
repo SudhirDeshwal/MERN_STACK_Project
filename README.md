@@ -65,34 +65,36 @@ Website Deploment is done at https://merchsid.herokuapp.com/
 These are the major end points website have , detailed explanation will be done during presentation.
 ### `Login and Sign up`
 Login:
-1.https://merchsid.herokuapp.com/api/signin
+1.Post - https://merchsid.herokuapp.com/api/signin
 
 Sign up:
-2.https://merchsid.herokuapp.com/api/signup
+2.Post -  https://merchsid.herokuapp.com/api/signup
 
 Logout:
-3.https://merchsid.herokuapp.com/api/signout
+3.Get - https://merchsid.herokuapp.com/api/signout
 
 
 There are more private routes as well where user can go only if he signed user for exmaple.
 
 ---Testing Purpose : I can explain drung ppt---
-4.https://merchsid.herokuapp.com/api/onlyLogged/:userId
-5.https://merchsid.herokuapp.com/api/user/:userId
+4.GET -  https://merchsid.herokuapp.com/api/onlyLogged/:userId
+5.GET -  https://merchsid.herokuapp.com/api/user/:userId
 
 
 ### `Product`
-1.https://merchsid.herokuapp.com/api/products
-2.https://merchsid.herokuapp.com/api/products/related/:productId
-3.https://merchsid.herokuapp.com/api/products/categories
-4.https://merchsid.herokuapp.com/api/product/photo/:productId
-5.https://merchsid.herokuapp.com/api/product/:productId/:userId
-6.https://merchsid.herokuapp.com/api/product/create/:userId
-7.https://merchsid.herokuapp.com/api/product/:productId
+1.GET -  https://merchsid.herokuapp.com/api/products
+2.GET -  https://merchsid.herokuapp.com/api/products/related/:productId
+3.GET -  https://merchsid.herokuapp.com/api/products/categories
+4.GET -  https://merchsid.herokuapp.com/api/product/photo/:productId
+5.DELETE -  https://merchsid.herokuapp.com/api/product/:productId/:userId
+6.POST -  https://merchsid.herokuapp.com/api/product/create/:userId
+7.GET -  https://merchsid.herokuapp.com/api/product/:productId
+8.PUT -  https://merchsid.herokuapp.com/api/product/:productId/:userId
 
 ### `Category`
 
-1.https://merchsid.herokuapp.com/api/categories
-2.https://merchsid.herokuapp.com/api/category/:categoryId/:userId
-3.https://merchsid.herokuapp.com/api/category/create/:userId
-4.https://merchsid.herokuapp.com/api/category/:categoryId
+1.GET -  https://merchsid.herokuapp.com/api/categories
+2.PUT -  https://merchsid.herokuapp.com/api/category/:categoryId/:userId
+3.POST -  https://merchsid.herokuapp.com/api/category/create/:userId
+4.GET -  https://merchsid.herokuapp.com/api/category/:categoryId
+5.DELETE -  https://merchsid.herokuapp.com/api/category/:categoryId/:userId
