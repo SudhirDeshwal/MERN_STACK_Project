@@ -43,7 +43,7 @@ app.use('/api', productRoutes);
 
 
 //Port Settings
-const port  = process.env.PORT || 8000;
+const port  = process.env.PORT || 4000;
 
 app.listen(port ,() => {
 

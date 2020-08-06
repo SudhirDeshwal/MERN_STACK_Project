@@ -1,5 +1,6 @@
 ## Project Details(server)
 ## Project Name: MERCH
+## Developer Name : Sudhir
 
 ## Users/Role : 
 •	Admin 
@@ -39,14 +40,47 @@ Email: deshwalsudhir07@gmail.com
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run server`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:8000/api](http://localhost:8000/api) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Runs the app in the development mode locally.<br />
+Open [http://localhost:4000/api](http://localhost:4000/api) to view it in the browser.
 
 ## Deployment
 
-Deployment will be done together with front end before final submission.
+Website Deploment is done at https://merchsid.herokuapp.com/
+
+## Api End Points
+These are the major end points website have , detailed explanation will be done during presentation.
+### `Login and Sign up`
+Login:
+1.https://merchsid.herokuapp.com/api/signin
+
+Sign up:
+2.https://merchsid.herokuapp.com/api/signup
+
+Logout:
+3.https://merchsid.herokuapp.com/api/signout
+
+
+There are more private routes as well where user can go only if he signed user for exmaple.
+
+---Testing Purpose : I can explain drung ppt---
+4.https://merchsid.herokuapp.com/api/onlyLogged/:userId
+5.https://merchsid.herokuapp.com/api/user/:userId
+
+
+### `Product`
+1.https://merchsid.herokuapp.com/api/products
+2.https://merchsid.herokuapp.com/api/products/related/:productId
+3.https://merchsid.herokuapp.com/api/products/categories
+4.https://merchsid.herokuapp.com/api/product/photo/:productId
+5.https://merchsid.herokuapp.com/api/product/:productId/:userId
+6.https://merchsid.herokuapp.com/api/product/create/:userId
+7.https://merchsid.herokuapp.com/api/product/:productId
+
+### `Category`
+
+1.https://merchsid.herokuapp.com/api/categories
+2.https://merchsid.herokuapp.com/api/category/:categoryId/:userId
+3.https://merchsid.herokuapp.com/api/category/create/:userId
+4.https://merchsid.herokuapp.com/api/category/:categoryId
