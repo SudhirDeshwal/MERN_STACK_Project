@@ -6,26 +6,35 @@
 •	Admin 
 •	Normal user
 
-## Concept :
+## Concept Summary :
 •	Project is created to sell products online where admin can create product category and new products and can assign categories to products. While users can check the products listed by admin using different filters such as new arrival, most seller etc.
 
 ## Functionality :
 ### `Register`  
 •	Login
 •	Sign up
+•	Sign out
+•	Private user who only logged on.
 
 ### `Product`
-•	New Product
-•	Filters on Products.
-•	Search Products.
+•	New Product(only admin can create)
+•	Photo upload function during form create.
+•	Category will be automatically load in drop down from category table during from create.
+•	List and Update Products using filters.
 
 ### `Categories`
 •	New Category
-•	Assign category to product
+•	List ,Update and delete Category
+•	Assign category to product as ref relationship in tables.
 
-### `Role Management` 
+### `Role Management and Two Dashboards` 
 •	User can sign up and check products with user dashboard
 •	Admin can Manage Product Categories and Products Listing with admin dashboard
+
+### `Product Manipulation`
+•	List product
+•	Search Product
+•	Filter Sort Product by arrival, sold by , price range.
 
 
 ## Assignment of work:
