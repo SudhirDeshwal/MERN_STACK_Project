@@ -36,13 +36,16 @@
 •	Search Product
 •	Filter Sort Product by arrival, sold by , price range.
 
+### `Validation`
+•	Error handling on backend and front end on all fields in whole website.
+•	Validation for all parameters in helpers.
 
 ## Assignment of work:
 •	All functionality created by me(Sudhir) as its an individual  project for me.
 
 ## Developer Details
 Name : Sudhir
-ID: N01324321
+Id: N01324321
 Email: deshwalsudhir07@gmail.com
 
 ## Available Scripts
