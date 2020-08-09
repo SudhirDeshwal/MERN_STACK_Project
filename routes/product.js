@@ -24,7 +24,7 @@ router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProd
 router.get("/products", listproducts);
 router.get("/products/related/:productId", listRelated);
 router.get("/products/categories", listCategories);
-router.get("/product/photo/:productId", photo);
+router.get("/product/photo/:productId", photo); 
 
 //using id in param
 router.param('userId', userByID);

@@ -20,7 +20,7 @@ exports.create = (req, res) => {
 
         if (!name || !description || !price || !category || !quantity || !shipping) {
             return res.status(400).json({
-                error: 'All fields are required'
+                error: 'All fields are required...'
             });
         }
 
@@ -105,15 +105,9 @@ exports.updateProduct = (req , res) => {
                 error: 'Image could not be uploaded'
             });
         }
-        // product validation
-        const { name, description, price, category, quantity, shipping } = fields;
+       
 
-        if (!name || !description || !price || !category || !quantity || !shipping) {
-            return res.status(400).json({
-                error: 'All fields are required'
-            });
-        }
-
+    
         let Newproduct = req.product;
         product = _.extend(product, fields);
 
