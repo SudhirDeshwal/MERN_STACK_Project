@@ -8,7 +8,7 @@ const router = express.Router();
 const { userByID } = require('../controllers/user')
 
 //imports from controller Product
-const { create , productById , fectchproduct , removeProduct , updateProduct , listproducts,
+const { create , productById , fectchproduct , removeProduct , update , listproducts,
     listRelated, listCategories , photo , listBySearch} = require('../controllers/product')
 
 //from controller auth
@@ -19,7 +19,7 @@ router.get("/product/:productId", fectchproduct);
 router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 router.post("/products/by/search", listBySearch);
 router.delete("/product/:productId/:userId",requireSignin,isAuth,isAdmin,removeProduct);
-router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct); 
+router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,update); 
 //Advnaced fetch operations quieries on products
 router.get("/products", listproducts);
 router.get("/products/related/:productId", listRelated);
