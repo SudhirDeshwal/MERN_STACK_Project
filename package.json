@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "server":"nodemon app.js"
+    "server": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/SudhirDeshwal/MERN_STACK_Project#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "braintree": "^2.24.0",
     "config": "^3.3.1",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
