@@ -19,7 +19,7 @@ router.get("/product/:productId", fectchproduct);
 router.post('/product/create/:userId', requireSignin,isAuth,isAdmin, create )
 router.post("/products/by/search", listBySearch);
 router.delete("/product/:productId/:userId",requireSignin,isAuth,isAdmin,removeProduct);
-router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct);
+router.put("/product/:productId/:userId",requireSignin,isAuth,isAdmin,updateProduct); 
 //Advnaced fetch operations quieries on products
 router.get("/products", listproducts);
 router.get("/products/related/:productId", listRelated);
